@@ -1,0 +1,18 @@
+.host {
+    display: flex;
+}
+
+.host__name {
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.host__name p {
+    margin: 0;
+    text-align: end;
+}
+.host__picture {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}

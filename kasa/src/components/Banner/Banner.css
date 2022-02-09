@@ -1,41 +1,38 @@
-.home {
-    margin: 0 5%;
-}
-
-.home__banner {
+.banner {
     max-width: 1240px;
-    border-radius: 25px;
+    border-radius: 10px;
     position: relative;
-    margin: 20px 0;
+    margin: 16px 0;
+    height: 223px;
 }
 
-.home_banner-img {
+.banner__img {
     border-radius: inherit;
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.home__banner-overlay {
+.banner__overlay {
     background-color: #000;
     position: absolute;
     top: 0;
-    border-radius: 25px;
+    border-radius: 10px;
     height: 100%;
     width: 100%;
     opacity: 0.3;
 }
 
-.home__banner-text {
+.banner__text {
     position: absolute;
     top: 0;
-    font-size: 48px;
+    font-size: 24px;
     color: #fff;
     font-weight: 500;
     margin: 0;
+    padding-left: 16px;
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }

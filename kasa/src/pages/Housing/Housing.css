@@ -1,0 +1,22 @@
+.housing__wrapper {
+    margin: 0 5%;
+    color: #ff6060;
+}
+
+.housing__title {
+    font-size: 18px;
+    font-weight: 500;
+}
+.housing__location {
+    font-size: 14px;
+    font-weight: 500;
+}
+.housing__tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+.housing__rating-and-host {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
