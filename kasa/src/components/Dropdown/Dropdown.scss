@@ -1,0 +1,69 @@
+@use '../../utils/style/colors' as *;
+
+.dropdown {
+    color: $white;
+    margin-bottom: 20px;
+    animation: fadeInUp 500ms ease-in-out;
+
+    &__button {
+        border-radius: 5px;
+        background-color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        font-size: 13px;
+        font-weight: 500;
+        margin-left: 12px;
+        text-transform: capitalize;
+        pointer-events: none;
+    }
+
+    &__arrow {
+        margin-right: 12px;
+        pointer-events: none;
+        transform: rotate(0deg);
+        transition: transform 300ms;
+    }
+    &__content {
+        color: $primary-color;
+        background-color: $light-grey;
+        border-radius: 5px;
+        margin-top: -5px;
+        z-index: -1;
+        max-height: 0;
+        transition: max-height 250ms ease-out, padding 300ms ease-out;
+        overflow: hidden;
+        padding-left: 12px;
+    }
+    &__text {
+        margin: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.show {
+    max-height: 500px;
+    padding: 24px 12px 12px 12px;
+    transition: max-height 250ms ease-in-out, padding 300ms ease-in-out;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}

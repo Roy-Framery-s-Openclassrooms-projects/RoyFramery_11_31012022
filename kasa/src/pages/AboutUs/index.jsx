@@ -4,7 +4,7 @@ import aboutUs from '../../__mocks__/aboutUs'
 import Dropdown from '../../components/Dropdown'
 
 // CSS
-import './AboutUs.css'
+import './AboutUs.scss'
 
 const AboutUs = () => {
     useEffect(() => {
@@ -39,10 +39,26 @@ const AboutUs = () => {
         <div className="aboutUs">
             <Banner image={image} />
             <div className="aboutUs__dropdowns">
-                <Dropdown title="fiabilité" content={content('fiabilité')} />
-                <Dropdown title="respect" content={content('respect')} />
-                <Dropdown title="service" content={content('service')} />
-                <Dropdown title="sécurité" content={content('sécurité')} />
+                <Dropdown
+                    className="aboutUs__dropdown"
+                    title="fiabilité"
+                    content={content('fiabilité')}
+                />
+                <Dropdown
+                    className="aboutUs__dropdown--fadeInWithDelay"
+                    title="respect"
+                    content={content('respect')}
+                />
+                <Dropdown
+                    className="aboutUs__dropdown--fadeInWithDelay"
+                    title="service"
+                    content={content('service')}
+                />
+                <Dropdown
+                    className="aboutUs__dropdown--fadeInWithDelay"
+                    title="sécurité"
+                    content={content('sécurité')}
+                />
             </div>
         </div>
     )

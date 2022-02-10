@@ -1,5 +1,5 @@
 // CSS
-import './Tag.css'
+import './Tag.scss'
 
 const Tag = ({ tagName }) => {
     return (

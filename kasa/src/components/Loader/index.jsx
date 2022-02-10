@@ -1,8 +1,8 @@
-import './Loader.css'
+import './Loader.scss'
 
 const Loader = () => {
     return (
-        <div className="loader__wrapper">
+        <div className="loader">
             <div className="loader__element"></div>
         </div>
     )

@@ -1,0 +1,26 @@
+@use '../../utils/style/colors' as *;
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 7%;
+    padding-top: 20px;
+
+    &__link {
+        color: $primary-color;
+        text-decoration: none;
+        margin-left: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+
+    &__img {
+        height: 47px;
+    }
+}

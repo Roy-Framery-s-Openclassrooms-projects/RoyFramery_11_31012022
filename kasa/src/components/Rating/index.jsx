@@ -1,4 +1,4 @@
-import './Rating.css'
+import './Rating.scss'
 
 const Rating = ({ rating }) => {
     const range = [1, 2, 3, 4, 5]

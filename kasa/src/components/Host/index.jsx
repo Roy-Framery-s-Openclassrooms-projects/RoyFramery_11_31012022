@@ -1,4 +1,4 @@
-import './Host.css'
+import './Host.scss'
 
 const Host = ({ host }) => {
     const splitedName = host.name.split(' ')

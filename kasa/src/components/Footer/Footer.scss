@@ -1,13 +1,15 @@
+@use '../../utils/style/colors' as *;
+
 .footer {
-    background: #000;
+    background: $black;
     height: 209px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.footer__text {
-    color: #fff;
-    font-weight: 500;
+    &__text {
+        color: $white;
+        font-weight: 500;
+    }
 }

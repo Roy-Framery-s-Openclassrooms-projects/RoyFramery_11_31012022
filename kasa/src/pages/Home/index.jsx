@@ -5,7 +5,7 @@ import { GetAllHousing } from '../../service/api'
 import Thumb from '../../components/Thumb'
 import Loader from '../../components/Loader'
 // CSS
-import './Home.css'
+import './Home.scss'
 
 const App = () => {
     const { data, isLoading, error } = GetAllHousing(

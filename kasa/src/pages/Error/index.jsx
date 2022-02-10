@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
-import './Error.css'
+// css
+import './Error.scss'
 
 const Error = () => {
     return (
-        <div className="error__wrapper">
+        <div className="error">
             <div className="error__content">
                 <p className="error__number">404</p>
                 <p className="error__text">

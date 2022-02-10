@@ -1,0 +1,18 @@
+@use '../../utils/style/colors' as *;
+
+.tag {
+    background: $primary-color;
+    border-radius: 5px;
+    color: $white;
+    padding: 3px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 68px;
+    text-align: center;
+
+    &__text {
+        margin: 0;
+        font-size: 10px;
+        font-weight: 500;
+    }
+}

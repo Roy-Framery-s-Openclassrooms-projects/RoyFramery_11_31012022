@@ -6,7 +6,7 @@ import Host from '../../components/Host'
 import Rating from '../../components/Rating'
 
 // CSS
-import './Housing.css'
+import './Housing.scss'
 
 const Housing = () => {
     const { id } = useParams()
@@ -21,7 +21,7 @@ const Housing = () => {
             {isLoading ? (
                 <Loader />
             ) : (
-                <div className="housing__wrapper">
+                <div className="housing">
                     {/* gallery */}
                     <h1 className="housing__title">{housing.title}</h1>
                     <p className="housing__location">{housing.location}</p>
