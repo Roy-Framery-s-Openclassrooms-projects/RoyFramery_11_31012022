@@ -40,24 +40,24 @@ const AboutUs = () => {
             <Banner image={image} />
             <div className="aboutUs__dropdowns">
                 <Dropdown
-                    className="aboutUs__dropdown"
                     title="fiabilité"
                     content={content('fiabilité')}
+                    className="dropdown dropdown__fiability"
                 />
                 <Dropdown
-                    className="aboutUs__dropdown--fadeInWithDelay"
                     title="respect"
                     content={content('respect')}
+                    className="dropdown dropdown__respect"
                 />
                 <Dropdown
-                    className="aboutUs__dropdown--fadeInWithDelay"
                     title="service"
                     content={content('service')}
+                    className="dropdown dropdown__service"
                 />
                 <Dropdown
-                    className="aboutUs__dropdown--fadeInWithDelay"
                     title="sécurité"
                     content={content('sécurité')}
+                    className="dropdown dropdown__security"
                 />
             </div>
         </div>

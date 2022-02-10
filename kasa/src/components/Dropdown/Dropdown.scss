@@ -47,6 +47,16 @@
     }
 }
 
+.show {
+    max-height: 500px;
+    padding: 24px 12px 12px 12px;
+    transition: max-height 250ms ease-in-out, padding 300ms ease-in-out;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -58,12 +68,22 @@
     }
 }
 
-.show {
-    max-height: 500px;
-    padding: 24px 12px 12px 12px;
-    transition: max-height 250ms ease-in-out, padding 300ms ease-in-out;
+$dropdowns: 'fiability', 'respect', 'service', 'security';
+@for $i from 1 through length($dropdowns) {
+    .dropdown__#{nth($dropdowns, $i)} {
+        $delay: 120ms * $i;
+        animation: show-up 600ms $delay both;
+        transform-origin: bottom;
+    }
 }
 
-.rotate {
-    transform: rotate(180deg);
+@keyframes show-up {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
