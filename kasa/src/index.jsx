@@ -12,9 +12,6 @@ import AboutUs from './pages/AboutUs'
 import Housing from './pages/Housing'
 import Error from './pages/Error'
 
-const newLang = 'fr'
-document.documentElement.lang = newLang
-
 ReactDOM.render(
     <React.StrictMode>
         <Router>
