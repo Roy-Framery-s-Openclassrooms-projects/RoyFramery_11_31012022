@@ -1,4 +1,5 @@
 @use '../../utils/style/colors' as *;
+@use '../../utils/style/breakpoints' as *;
 
 .nav {
     display: flex;
@@ -6,6 +7,15 @@
     align-items: center;
     margin: 5%;
     padding-top: 20px;
+    @include media-query(small) {
+        margin: 4% 5%;
+    }
+    @include media-query(medium) {
+        margin: 3% 5%;
+    }
+    @include media-query(large) {
+        margin: 2% 5%;
+    }
 
     &__link {
         color: $primary-color;
@@ -14,6 +24,18 @@
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
+        @include media-query(small) {
+            font-size: 17px;
+            margin-left: 28px;
+        }
+        @include media-query(medium) {
+            font-size: 20px;
+            margin-left: 42px;
+        }
+        @include media-query(large) {
+            font-size: 24px;
+            margin-left: 57px;
+        }
     }
 
     &__link:hover {
@@ -22,5 +44,14 @@
 
     &__img {
         height: 47px;
+        @include media-query(small) {
+            height: 53px;
+        }
+        @include media-query(medium) {
+            height: 61px;
+        }
+        @include media-query(large) {
+            height: 68px;
+        }
     }
 }

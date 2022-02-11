@@ -1,12 +1,16 @@
 @use '../../utils/style/colors' as *;
+@use '../../utils/style/breakpoints' as *;
 
 .error {
     color: $primary-color;
-    height: 625px;
+    height: 570px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include media-query(medium) {
+        height: 725px;
+    }
 
     &__content {
         margin: 0 40px;
@@ -17,6 +21,15 @@
         font-size: 96px;
         font-weight: 700;
         margin: 0;
+        @include media-query(small) {
+            font-size: 160px;
+        }
+        @include media-query(medium) {
+            font-size: 224px;
+        }
+        @include media-query(large) {
+            font-size: 288px;
+        }
     }
 
     &__text {
@@ -24,6 +37,15 @@
         font-weight: 500;
         margin: 0;
         margin-top: 10px;
+        @include media-query(small) {
+            font-size: 24px;
+        }
+        @include media-query(medium) {
+            font-size: 30px;
+        }
+        @include media-query(large) {
+            font-size: 36px;
+        }
     }
 
     &__link {
@@ -31,5 +53,11 @@
         font-size: 14px;
         font-weight: 500;
         margin-top: 133px;
+        @include media-query(medium) {
+            font-size: 16px;
+        }
+        @include media-query(large) {
+            font-size: 18px;
+        }
     }
 }

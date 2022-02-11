@@ -4,6 +4,8 @@ import Loader from '../../components/Loader'
 import Tag from '../../components/Tag'
 import Host from '../../components/Host'
 import Rating from '../../components/Rating'
+import Dropdown from '../../components/Dropdown'
+import Carrousel from '../../components/Carrousel'
 
 // CSS
 import './Housing.scss'
@@ -22,20 +24,36 @@ const Housing = () => {
                 <Loader />
             ) : (
                 <div className="housing">
-                    {/* gallery */}
-                    <h1 className="housing__title">{housing.title}</h1>
-                    <p className="housing__location">{housing.location}</p>
-                    <div className="housing__tags">
-                        {housing.tags.map((tag) => (
-                            <Tag key={tag} tagName={tag} />
-                        ))}
+                    <Carrousel pictures={housing.pictures} />
+                    <div className="housing__content">
+                        <div className="housing__informations">
+                            <h1 className="housing__title">{housing.title}</h1>
+                            <p className="housing__location">
+                                {housing.location}
+                            </p>
+                            <div className="housing__tags">
+                                {housing.tags.map((tag) => (
+                                    <Tag key={tag} tagName={tag} />
+                                ))}
+                            </div>
+                        </div>
+                        <div className="housing__rating-and-host">
+                            <Rating rating={housing.rating} />
+                            <Host host={housing.host} />
+                        </div>
                     </div>
-                    <div className="housing__rating-and-host">
-                        <Rating rating={housing.rating} />
-                        <Host host={housing.host} />
+                    <div className="housing__dropdowns">
+                        <Dropdown
+                            title="description"
+                            content={housing.description}
+                            className="dropdown"
+                        />
+                        <Dropdown
+                            title="équipement"
+                            content={housing.equipments}
+                            className="dropdown"
+                        />
                     </div>
-                    <p>Description</p>
-                    <p>Équipement</p>
                 </div>
             )}
         </div>

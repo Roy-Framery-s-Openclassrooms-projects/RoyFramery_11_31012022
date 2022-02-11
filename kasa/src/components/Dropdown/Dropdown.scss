@@ -1,4 +1,5 @@
 @use '../../utils/style/colors' as *;
+@use '../../utils/style/breakpoints' as *;
 
 .dropdown {
     color: $white;
@@ -15,6 +16,17 @@
         cursor: pointer;
         position: relative;
         z-index: 1;
+
+        @include media-query(small) {
+            height: 38px;
+        }
+        @include media-query(medium) {
+            height: 46px;
+            border-radius: 10px;
+        }
+        @include media-query(large) {
+            height: 52px;
+        }
     }
 
     &__title {
@@ -23,6 +35,12 @@
         margin-left: 12px;
         text-transform: capitalize;
         pointer-events: none;
+        @include media-query(medium) {
+            font-size: 15px;
+        }
+        @include media-query(large) {
+            font-size: 18px;
+        }
     }
 
     &__arrow {
@@ -30,6 +48,12 @@
         pointer-events: none;
         transform: rotate(0deg);
         transition: transform 300ms;
+        @include media-query(medium) {
+            height: 13px;
+        }
+        @include media-query(large) {
+            height: 17px;
+        }
     }
     &__content {
         color: $primary-color;
@@ -44,6 +68,28 @@
     }
     &__text {
         margin: 0;
+        font-size: 12px;
+        @include media-query(medium) {
+            font-size: 14px;
+        }
+        @include media-query(large) {
+            font-size: 18px;
+        }
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+        @include media-query(medium) {
+            font-size: 14px;
+        }
+        @include media-query(large) {
+            font-size: 18px;
+        }
+    }
+    &__list-element {
+        margin-bottom: 3px;
     }
 }
 

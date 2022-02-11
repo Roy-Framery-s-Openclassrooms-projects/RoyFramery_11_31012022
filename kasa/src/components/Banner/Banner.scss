@@ -1,4 +1,5 @@
 @use '../../utils/style/colors' as *;
+@use '../../utils/style/breakpoints' as *;
 
 .banner {
     border-radius: 10px;
@@ -36,6 +37,15 @@
         width: 100%;
         display: flex;
         align-items: center;
+        box-sizing: border-box;
+
+        @include media-query(medium) {
+            font-size: 36px;
+            justify-content: center;
+        }
+        @include media-query(large) {
+            font-size: 48px;
+        }
     }
 }
 

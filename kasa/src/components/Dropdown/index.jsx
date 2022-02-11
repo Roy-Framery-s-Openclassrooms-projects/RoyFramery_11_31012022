@@ -14,7 +14,6 @@ const Dropdown = ({ title, content, className }) => {
             arrow.classList.add('rotate')
         }
     }
-
     return (
         <div className={className}>
             <div className="dropdown__button" onClick={handleDropdown}>
@@ -22,7 +21,20 @@ const Dropdown = ({ title, content, className }) => {
                 <img className="dropdown__arrow" src="/arrow-down.svg" alt="" />
             </div>
             <div className="dropdown__content">
-                <p className="dropdown__text">{content}</p>
+                {Array.isArray(content) ? (
+                    <ul className="dropdown__list">
+                        {content.map((equipment) => (
+                            <li
+                                key={equipment}
+                                className="dropdown__list-element"
+                            >
+                                {equipment}
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p className="dropdown__text">{content}</p>
+                )}
             </div>
         </div>
     )

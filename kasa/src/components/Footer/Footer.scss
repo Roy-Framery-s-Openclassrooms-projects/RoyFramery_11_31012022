@@ -1,4 +1,5 @@
 @use '../../utils/style/colors' as *;
+@use '../../utils/style/breakpoints' as *;
 
 .footer {
     background: $black;
@@ -8,8 +9,24 @@
     justify-content: center;
     align-items: center;
 
+    @include media-query(medium) {
+        justify-content: end;
+    }
+
     &__text {
         color: $white;
         font-weight: 500;
+        font-size: 12px;
+        @include media-query(small) {
+            font-size: 16px;
+        }
+        @include media-query(medium) {
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        @include media-query(large) {
+            font-size: 24px;
+        }
     }
 }
