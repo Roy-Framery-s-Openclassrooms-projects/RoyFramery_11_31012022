@@ -5,8 +5,14 @@
     border-radius: 10px;
     position: relative;
     margin: 20px 0;
-    height: 223px;
+    height: 111px;
     animation: fadeIn 500ms ease-in-out;
+    @include media-query(medium) {
+        height: 167px;
+    }
+    @include media-query(large) {
+        height: 223px;
+    }
 
     &__img {
         border-radius: inherit;

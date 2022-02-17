@@ -15,16 +15,12 @@ const AboutUs = () => {
         switch (title) {
             case 'fiabilité':
                 return aboutUs.fiability
-                break
             case 'respect':
                 return aboutUs.respect
-                break
             case 'service':
                 return aboutUs.service
-                break
             case 'sécurité':
                 return aboutUs.security
-                break
             default:
                 console.log('default')
                 break
@@ -39,26 +35,10 @@ const AboutUs = () => {
         <div className="aboutUs">
             <Banner image={image} />
             <div className="aboutUs__dropdowns">
-                <Dropdown
-                    title="fiabilité"
-                    content={content('fiabilité')}
-                    className="dropdown dropdown__fiability"
-                />
-                <Dropdown
-                    title="respect"
-                    content={content('respect')}
-                    className="dropdown dropdown__respect"
-                />
-                <Dropdown
-                    title="service"
-                    content={content('service')}
-                    className="dropdown dropdown__service"
-                />
-                <Dropdown
-                    title="sécurité"
-                    content={content('sécurité')}
-                    className="dropdown dropdown__security"
-                />
+                <Dropdown title="fiabilité" content={content('fiabilité')} />
+                <Dropdown title="respect" content={content('respect')} />
+                <Dropdown title="service" content={content('service')} />
+                <Dropdown title="sécurité" content={content('sécurité')} />
             </div>
         </div>
     )

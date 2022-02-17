@@ -9,10 +9,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
     max-width: 1440px;
     margin: auto;
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
+}
+#root {
+    padding-bottom: 209px;
 }

@@ -2,6 +2,9 @@
 @use '../../utils/style/breakpoints' as *;
 
 .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background: $black;
     height: 209px;
     display: flex;

@@ -13,7 +13,7 @@ import './Housing.scss'
 const Housing = () => {
     const { id } = useParams()
     const { data, isLoading } = GetHousingById(
-        'http://localhost:8080/housing',
+        'https://github.com/Roy-Framery-s-Openclassrooms-projects/RoyFramery_11_31012022/blob/dev/kasa/src/__mocks__/data.json',
         id
     )
     const housing = data
@@ -46,12 +46,10 @@ const Housing = () => {
                         <Dropdown
                             title="description"
                             content={housing.description}
-                            className="dropdown"
                         />
                         <Dropdown
                             title="équipement"
                             content={housing.equipments}
-                            className="dropdown"
                         />
                     </div>
                 </div>

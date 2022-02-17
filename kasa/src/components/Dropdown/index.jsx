@@ -1,7 +1,7 @@
 // CSS
 import './Dropdown.scss'
 
-const Dropdown = ({ title, content, className }) => {
+const Dropdown = ({ title, content }) => {
     const handleDropdown = (e) => {
         const contentNode = e.target.nextSibling
         const arrow = e.target.lastChild
@@ -15,7 +15,7 @@ const Dropdown = ({ title, content, className }) => {
         }
     }
     return (
-        <div className={className}>
+        <div className="dropdown ">
             <div className="dropdown__button" onClick={handleDropdown}>
                 <div className="dropdown__title">{title}</div>
                 <img className="dropdown__arrow" src="/arrow-down.svg" alt="" />
