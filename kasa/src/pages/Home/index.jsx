@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Banner from '../../components/Banner'
 import { Link } from 'react-router-dom'
 import { GetAllHousing } from '../../service/api'
@@ -12,17 +11,13 @@ const App = () => {
         'http://localhost:8080/housing'
     )
     const housing = data
-
-    useEffect(() => {
-        document.title = 'Accueil'
-    }, [])
-
     const slogan = 'Chez vous, partout et ailleurs'
     const image = '/banner.png'
 
     if (error) {
         return <div>{error}</div>
     }
+
     return (
         <div className="home">
             <div className="home__banner">

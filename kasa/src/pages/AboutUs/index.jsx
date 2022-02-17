@@ -11,6 +11,7 @@ const AboutUs = () => {
         document.title = 'À propos'
     }, [])
 
+    // Switch to display content in the dropdown by title
     const content = (title) => {
         switch (title) {
             case 'fiabilité':

@@ -6,9 +6,11 @@ const Carrousel = ({ pictures }) => {
     const [current, setCurrent] = useState(0)
     const picturesLength = pictures.length
 
-    const nextPicture = (e) => {
+    // To go to the next picture
+    const nextPicture = () => {
         setCurrent(current === picturesLength - 1 ? 0 : current + 1)
     }
+    // To go to the previous picture
     const previousPicture = () => {
         setCurrent(current === 0 ? picturesLength - 1 : current - 1)
     }
@@ -35,6 +37,7 @@ const Carrousel = ({ pictures }) => {
                     </div>
                 )
             })}
+            {/* To display the button if there are more thant one picture */}
             {picturesLength > 1 ? (
                 <>
                     <div

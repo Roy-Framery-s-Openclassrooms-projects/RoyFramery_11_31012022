@@ -2,6 +2,7 @@
 import './Dropdown.scss'
 
 const Dropdown = ({ title, content }) => {
+    // Function that handle dropdowns behaviors
     const handleDropdown = (e) => {
         const contentNode = e.target.nextSibling
         const arrow = e.target.lastChild
