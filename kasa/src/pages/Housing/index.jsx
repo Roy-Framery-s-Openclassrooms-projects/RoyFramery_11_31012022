@@ -13,7 +13,7 @@ import './Housing.scss'
 const Housing = () => {
     const { id } = useParams()
     const { data, isLoading } = GetHousingById(
-        'https://github.com/Roy-Framery-s-Openclassrooms-projects/RoyFramery_11_31012022/blob/dev/kasa/src/__mocks__/data.json',
+        'http://localhost:8080/housing',
         id
     )
     const housing = data
