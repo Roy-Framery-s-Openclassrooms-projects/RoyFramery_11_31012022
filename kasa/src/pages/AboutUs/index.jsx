@@ -14,13 +14,13 @@ const AboutUs = () => {
     // Switch to display content in the dropdown by title
     const content = (title) => {
         switch (title) {
-            case 'fiabilité':
+            case 'fiability':
                 return aboutUs.fiability
             case 'respect':
                 return aboutUs.respect
             case 'service':
                 return aboutUs.service
-            case 'sécurité':
+            case 'sécurity':
                 return aboutUs.security
             default:
                 console.log('default')
@@ -36,10 +36,10 @@ const AboutUs = () => {
         <div className="aboutUs">
             <Banner image={image} />
             <div className="aboutUs__dropdowns">
-                <Dropdown title="fiabilité" content={content('fiabilité')} />
+                <Dropdown title="fiabilité" content={content('fiability')} />
                 <Dropdown title="respect" content={content('respect')} />
                 <Dropdown title="service" content={content('service')} />
-                <Dropdown title="sécurité" content={content('sécurité')} />
+                <Dropdown title="sécurité" content={content('sécurity')} />
             </div>
         </div>
     )
